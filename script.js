@@ -1,20 +1,28 @@
 // Your JS goes here
-function createTile(color){
+
+function rgbColor() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+
+    return bgColor;
+}
+
+function createTile(){
 
     const tile = document.createElement('div');
   
     tile.style.width = '11.1%';
     tile.style.float = 'left';
     tile.style.paddingBottom = '11.1%';
-    tile.style.backgroundColor = color
-    //tile.innerHTML = 'new div';
-  
+    tile.style.backgroundColor = rgbColor()
+    
     return tile;
   }
   
   for (let i = 0; i < 63; i++) {
-    const color = i % 2 === 0 ? 'red' : 'black'
-    let addTileColor = createTile(color)
+    let addTileColor = createTile()
     const tiles = document.body.appendChild(addTileColor);
   }
         
