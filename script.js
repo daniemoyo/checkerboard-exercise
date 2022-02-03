@@ -17,6 +17,7 @@ function createTile(){
     tile.style.float = 'left';
     tile.style.paddingBottom = '11.1%';
     tile.style.backgroundColor = rgbColor()
+    //tile.style.background = "linear-gradient(green, blue)"
     
     return tile;
   }
